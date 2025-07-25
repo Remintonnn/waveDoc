@@ -11,7 +11,7 @@ import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter.constants import *
 
-import waveTicket
+import PageGen.waveDoc as waveDoc
 
 _debug = True # False to eliminate debug printing from callback functions.
 
@@ -23,130 +23,130 @@ def main(*args):
     # Creates a toplevel widget.
     global _top1, _w1
     _top1 = root
-    _w1 = waveTicket.Toplevel1(_top1)
+    _w1 = waveDoc.Toplevel1(_top1)
     root.mainloop()
 
 def OnWaveEndMsgCopy(*args):
     if _debug:
-        print('waveTicket_support.OnWaveEndMsgCopy')
+        print('waveDoc_support.OnWaveEndMsgCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def OnWaveStartMsgCopy(*args):
     if _debug:
-        print('waveTicket_support.OnWaveStartMsgCopy')
+        print('waveDoc_support.OnWaveStartMsgCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def OnWaveVideoTitleCopy(*args):
     if _debug:
-        print('waveTicket_support.OnWaveVideoTitleCopy')
+        print('waveDoc_support.OnWaveVideoTitleCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def RefreshWaveInfo(*args):
     if _debug:
-        print('waveTicket_support.RefreshWaveInfo')
+        print('waveDoc_support.RefreshWaveInfo')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def RemoveEnch(*args):
     if _debug:
-        print('waveTicket_support.RemoveEnch')
+        print('waveDoc_support.RemoveEnch')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def ResetWaveRequestFinishMsg(*args):
     if _debug:
-        print('waveTicket_support.ResetWaveRequestFinishMsg')
+        print('waveDoc_support.ResetWaveRequestFinishMsg')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def SetWaveInfoAutoRefresh(*args):
     if _debug:
-        print('waveTicket_support.SetWaveInfoAutoRefresh')
+        print('waveDoc_support.SetWaveInfoAutoRefresh')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def SetWaveRequestFinishMsgAutoReset(*args):
     if _debug:
-        print('waveTicket_support.SetWaveRequestFinishMsgAutoReset')
+        print('waveDoc_support.SetWaveRequestFinishMsgAutoReset')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def WaveCounterMinus(*args):
     if _debug:
-        print('waveTicket_support.WaveCounterMinus')
+        print('waveDoc_support.WaveCounterMinus')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def WaveCounterPlus(*args):
     if _debug:
-        print('waveTicket_support.WaveCounterPlus')
+        print('waveDoc_support.WaveCounterPlus')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def WaveCounterReset(*args):
     if _debug:
-        print('waveTicket_support.WaveCounterReset')
+        print('waveDoc_support.WaveCounterReset')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def WaveRequestFinishMsgCopy(*args):
     if _debug:
-        print('waveTicket_support.WaveRequestFinishMsgCopy')
+        print('waveDoc_support.WaveRequestFinishMsgCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def addEnch(*args):
     if _debug:
-        print('waveTicket_support.addEnch')
+        print('waveDoc_support.addEnch')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def BuyerIDCopy(*args):
     if _debug:
-        print('waveTicket_support.BuyerIDCopy')
+        print('waveDoc_support.BuyerIDCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def WaveEndMsgCopy(*args):
     if _debug:
-        print('waveTicket_support.WaveEndMsgCopy')
+        print('waveDoc_support.WaveEndMsgCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def WaveStartMsgCopy(*args):
     if _debug:
-        print('waveTicket_support.WaveStartMsgCopy')
+        print('waveDoc_support.WaveStartMsgCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 def WaveVideoTitleCopy(*args):
     if _debug:
-        print('waveTicket_support.WaveVideoTitleCopy')
+        print('waveDoc_support.WaveVideoTitleCopy')
         for arg in args:
             print ('    another arg:', arg)
         sys.stdout.flush()
 
 if __name__ == '__main__':
-    waveTicket.start_up()
+    waveDoc.start_up()
 
 
 

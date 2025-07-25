@@ -124,7 +124,7 @@ proc vTclWindow.top1 {base} {
     set site_4_0 $site_3_0.lab73
     button "$site_4_0.but86" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.VFX1Button)" \
+        -command "lambda: waveDoc_support.addEnch(self.VFX1Button)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "音效燈" 
@@ -135,7 +135,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but86
     button "$site_4_0.but108" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.VFX4Button)" \
+        -command "lambda: waveDoc_support.addEnch(self.VFX4Button)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "音效葵" 
@@ -146,7 +146,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but108
     button "$site_4_0.but87" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.VFX2Button)" \
+        -command "lambda: waveDoc_support.addEnch(self.VFX2Button)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "音效緣" 
@@ -157,7 +157,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but87
     button "$site_4_0.but89" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.VFX3Button)" \
+        -command "lambda: waveDoc_support.addEnch(self.VFX3Button)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "音效茜(ㄑㄧㄢˋ)" 
@@ -187,7 +187,7 @@ proc vTclWindow.top1 {base} {
     set site_4_0 $site_3_0.lab92
     button "$site_4_0.but87" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.FloatieButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.FloatieButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "浮力" 
@@ -198,7 +198,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but87
     button "$site_4_0.but86" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.FastWindButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.FastWindButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "疾風" 
@@ -209,7 +209,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but86
     button "$site_4_0.but90" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.NimbleButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.NimbleButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "靈巧" 
@@ -220,7 +220,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but90
     button "$site_4_0.but93" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.OreSmeltButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.OreSmeltButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "礦石熔煉" 
@@ -231,7 +231,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but93
     button "$site_4_0.but89" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.WindHitButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.WindHitButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "風擊" 
@@ -314,7 +314,7 @@ proc vTclWindow.top1 {base} {
     set site_4_0 $site_3_0.lab95
     button "$site_4_0.but90" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.SmartButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.SmartButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "智慧" 
@@ -325,7 +325,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but90
     button "$site_4_0.but96" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.FrozenButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.FrozenButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "冰凍" 
@@ -336,7 +336,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but96
     button "$site_4_0.but97" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.SpearButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.SpearButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "長矛" 
@@ -347,7 +347,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but97
     button "$site_4_0.but98" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.ExtendButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.ExtendButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "延伸" 
@@ -358,7 +358,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but98
     button "$site_4_0.but93" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.ExtendButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.ExtendButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "爆擊可能" 
@@ -369,7 +369,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but93
     button "$site_4_0.but105" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.YummyButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.YummyButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "美食" 
@@ -381,7 +381,7 @@ convenient to use}
     vTcl:copy_lock $site_4_0.but105
     button "$site_4_0.but87" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.HealthyButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.HealthyButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "健康" 
@@ -392,7 +392,7 @@ convenient to use}
     vTcl:copy_lock $site_4_0.but87
     button "$site_4_0.but89" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.StubbronButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.StubbronButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "倔強" 
@@ -403,7 +403,7 @@ convenient to use}
     vTcl:copy_lock $site_4_0.but89
     button "$site_4_0.but52" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.MiniButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.MiniButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "迷你化" 
@@ -413,7 +413,7 @@ convenient to use}
     }
     button "$site_4_0.but102" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.KBresButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.KBresButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "擊退保護" 
@@ -424,7 +424,7 @@ convenient to use}
     vTcl:copy_lock $site_4_0.but102
     button "$site_4_0.but99" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.ExpSacButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.ExpSacButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "獻祭經驗" 
@@ -435,7 +435,7 @@ convenient to use}
     vTcl:copy_lock $site_4_0.but99
     button "$site_4_0.but101" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.SteadySneakButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.SteadySneakButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "穩重潛行" 
@@ -446,7 +446,7 @@ convenient to use}
     vTcl:copy_lock $site_4_0.but101
     button "$site_4_0.but104" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.AntiBreakButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.AntiBreakButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "損毀救援" 
@@ -457,7 +457,7 @@ convenient to use}
     vTcl:copy_lock $site_4_0.but104
     button "$site_4_0.but86" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.BloodSuckingButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.BloodSuckingButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "吸血" 
@@ -517,7 +517,7 @@ convenient to use}
     set site_4_0 $site_3_0.lab107
     button "$site_4_0.but93" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveTicket_support.addEnch(self.MendButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.MendButton)" \
         -cursor draped_box -disabledforeground #a3a3a3 \
         -font "-family {Segoe UI} -size 9" -foreground #000000 \
         -highlightbackground #d9d9d9 -highlightcolor #000000 -text "自動修補" 

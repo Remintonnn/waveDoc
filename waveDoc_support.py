@@ -14,7 +14,7 @@ import datetime
 import cn2an
 import random
 
-import waveTicket
+import waveDoc
 from Config import confingInstance as config
 
 def main(*args):
@@ -32,7 +32,7 @@ def main(*args):
     # Creates a toplevel widget.
     global _top1, _w1
     _top1 = root
-    _w1 = waveTicket.Toplevel1(_top1)
+    _w1 = waveDoc.Toplevel1(_top1)
 
     # populate the widgets with default values
     # _w1.MonthSelectionBox.set(_w1.MonthSelectionBox['values'][0])
@@ -75,7 +75,7 @@ msgHeaders = {
 }
 
 def RefreshWaveInfo(*args):
-    debugAnnounce('waveTicket_support.RefreshWaveInfo', *args)
+    debugAnnounce('waveDoc_support.RefreshWaveInfo', *args)
     _w1.MonthSelectionBox.set("")
     _w1.DateSelectionBox.set("")
     _w1.HourSelectionBox.set("")
@@ -140,7 +140,7 @@ parsedFinishedMsg = [[config.RequestFinishHeader.get()]]
 def addEnch(button:tk.Button):
     global parsedFinishedMsg, manualEdit
     enchName:str = button.cget("text")
-    debugAnnounce('waveTicket_support.addEnch', (enchName))
+    debugAnnounce('waveDoc_support.addEnch', (enchName))
     bracketIndex = enchName.find("(")
     if bracketIndex != -1: enchName = enchName[:bracketIndex] # remove anything after "("
     waveCount = tryGetWaveCounter()
@@ -153,7 +153,7 @@ def addEnch(button:tk.Button):
     refreshFinishMsgTextElement()
 def RemoveEnch(*args):
     global parsedFinishedMsg, manualEdit
-    debugAnnounce('waveTicket_support.RemoveEnch', *args)
+    debugAnnounce('waveDoc_support.RemoveEnch', *args)
     waveCount = tryGetWaveCounter()
     if manualEdit:
         parseFinishMsg(_w1.WaveRequestFinishMsgTextElement.get("1.0", "end-1c"))
@@ -167,7 +167,7 @@ def RemoveEnch(*args):
     refreshFinishMsgTextElement()
     
 def parseFinishMsg(*args):
-    debugAnnounce('waveTicket_support.parseFinishMsg', *args)
+    debugAnnounce('waveDoc_support.parseFinishMsg', *args)
     global manualEdit, parsedFinishedMsg
     text = _w1.WaveRequestFinishMsgTextElement.get("1.0", "end-1c")
     text = [line.strip() for line in text.splitlines() if line.strip()]
@@ -175,7 +175,7 @@ def parseFinishMsg(*args):
     for line in text: parsedFinishedMsg.append([linePart for linePart in line.split() if linePart])
     manualEdit = False
 def parseFinishMsgWaveCountHeader(header:str):
-    debugAnnounce('waveTicket_support.parseFinishMsgWaveCountHeader', (header))
+    debugAnnounce('waveDoc_support.parseFinishMsgWaveCountHeader', (header))
     if len(header) == 0 : return -1
     if not header.startswith("第") or not header.endswith("波"):
         debugMsg("Invalid wave count header format, expected '第X波', got: " + header)
@@ -189,10 +189,10 @@ def parseFinishMsgWaveCountHeader(header:str):
             debugMsg("Invalid wave count header format, expected a number, got: " + header)
             return -1
 def getFinishMsgWaveCountHeader(count:int):
-    debugAnnounce('waveTicket_support.getFinishMsgWaveCountHeader', (count))
+    debugAnnounce('waveDoc_support.getFinishMsgWaveCountHeader', (count))
     return f"第{cn2an.an2cn(count)}波"
 def ResetWaveRequestFinishMsg(*args):
-    debugAnnounce('waveTicket_support.ResetWaveRequestFinishMsg', *args)
+    debugAnnounce('waveDoc_support.ResetWaveRequestFinishMsg', *args)
     global manualEdit, parsedFinishedMsg
     _w1.WaveRequestFinishMsgTextElement.delete("1.0", "end-1c")
     _w1.WaveRequestFinishMsgTextElement.insert("1.0", config.RequestFinishHeader.get())
@@ -201,14 +201,14 @@ def ResetWaveRequestFinishMsg(*args):
     _w1.WaveCount.delete("1.0", "end-1c")
     _w1.WaveCount.insert("1.0", "1")
 def refreshFinishMsgTextElement(*args):
-    debugAnnounce('waveTicket_support.refreshFinishMsgTextElement', *args)
+    debugAnnounce('waveDoc_support.refreshFinishMsgTextElement', *args)
     result = "\n".join([" ".join(lineParts) for lineParts in parsedFinishedMsg])
     _w1.WaveRequestFinishMsgTextElement.delete("1.0", "end-1c")
     _w1.WaveRequestFinishMsgTextElement.insert("1.0", result)
     _w1.WaveRequestFinishMsgTextElement.see("end")
 def fixWaveCountHeader(waveCount:int):
     global parsedFinishedMsg
-    debugAnnounce('waveTicket_support.fixWaveCountHeader', (waveCount))
+    debugAnnounce('waveDoc_support.fixWaveCountHeader', (waveCount))
     # make sure header is there
     if len(parsedFinishedMsg)==0 or len(parsedFinishedMsg[0])==0:
         parsedFinishedMsg = [[config.RequestFinishHeader.get()]]
@@ -232,7 +232,7 @@ def fixWaveCountHeader(waveCount:int):
             parsedFinishedMsg.append([getFinishMsgWaveCountHeader(i),":"])
 
 def WaveCounterMinus(*args):
-    debugAnnounce('waveTicket_support.WaveCounterMinus', *args)
+    debugAnnounce('waveDoc_support.WaveCounterMinus', *args)
     currentCount = _w1.WaveCount.get("1.0", "end-1c")
     if not WaveCounterCheck(currentCount):return # will reset if check fail
     newCount = int(currentCount) - 1
@@ -240,14 +240,14 @@ def WaveCounterMinus(*args):
     _w1.WaveCount.delete("1.0", "end-1c")
     _w1.WaveCount.insert("1.0", str(newCount))
 def WaveCounterPlus(*args):
-    debugAnnounce('waveTicket_support.WaveCounterPlus', *args)
+    debugAnnounce('waveDoc_support.WaveCounterPlus', *args)
     currentCount = _w1.WaveCount.get("1.0", "end-1c")
     if not WaveCounterCheck(currentCount):return # will reset if check fail
     newCount = int(currentCount) + 1
     _w1.WaveCount.delete("1.0", "end-1c")
     _w1.WaveCount.insert("1.0", str(newCount))
 def WaveCounterCheck(currentCount:str):
-    debugAnnounce('waveTicket_support.WaveCounterCheck', (currentCount))
+    debugAnnounce('waveDoc_support.WaveCounterCheck', (currentCount))
     if not currentCount.isdigit():
         debugMsg("Invalid wave count value, resetting to 1")
         WaveCounterReset()
@@ -256,11 +256,11 @@ def WaveCounterCheck(currentCount:str):
     if count < 1: WaveCounterReset(); return False
     return True
 def WaveCounterReset(*args):
-    debugAnnounce('waveTicket_support.WaveCounterReset', *args)
+    debugAnnounce('waveDoc_support.WaveCounterReset', *args)
     _w1.WaveCount.delete("1.0", "end-1c")
     _w1.WaveCount.insert("1.0", "1")
 def tryGetWaveCounter(*args):
-    debugAnnounce('waveTicket_support.tryGetWaveCount', *args)
+    debugAnnounce('waveDoc_support.tryGetWaveCount', *args)
     try:
         return int(_w1.WaveCount.get("1.0", "end-1c"))
     except ValueError:
@@ -268,7 +268,7 @@ def tryGetWaveCounter(*args):
         WaveCounterReset(*args)
         return 1
 def forcePlaceInsertMarkerAndUpdateWaveCount(event):
-    debugAnnounce('waveTicket_support.forcePlaceInsertMarkerAndUpdateWaveCount', event)
+    debugAnnounce('waveDoc_support.forcePlaceInsertMarkerAndUpdateWaveCount', event)
     index = _w1.WaveRequestFinishMsgTextElement.index(f"@{event.x},{event.y}")
     line, char = map(int, index.split('.'))
     line_length = int(_w1.WaveRequestFinishMsgTextElement.index(f"{line}.end").split('.')[1])
@@ -280,7 +280,7 @@ def forcePlaceInsertMarkerAndUpdateWaveCount(event):
 
 # houseKeeping
 def onRawMsgChange(*args):
-    debugAnnounce('waveTicket_support.onRawMsgChange', *args)
+    debugAnnounce('waveDoc_support.onRawMsgChange', *args)
     if(_w1.WaveInfoAutoRefresh.get()):
         # Automatically refresh wave info when raw message text changes
         RefreshWaveInfo(*args)
@@ -288,7 +288,7 @@ def onRawMsgChange(*args):
         # Automatically reset wave request finish message when raw message text changes
         ResetWaveRequestFinishMsg(*args)
 def onWaveStartMsgFormatChange(*args):
-    debugAnnounce('waveTicket_support.onWaveStartMsgChange', *args)
+    debugAnnounce('waveDoc_support.onWaveStartMsgChange', *args)
     text = _w1.WaveStartMsgFormat.get("1.0", "end-1c")
     if len(text) == 0:
         config.WaveStartFormat.reset()
@@ -296,7 +296,7 @@ def onWaveStartMsgFormatChange(*args):
     else:
         config.WaveStartFormat.set(_w1.WaveStartMsgFormat.get("1.0", "end-1c"))
 def onWaveEndMsgFormatChange(*args):
-    debugAnnounce('waveTicket_support.onWaveEndMsgFormatChange', *args)
+    debugAnnounce('waveDoc_support.onWaveEndMsgFormatChange', *args)
     text = _w1.WaveEndMsgFormat.get("1.0", "end-1c")
     if len(text) == 0:
         config.WaveEndFormat.reset()
@@ -304,7 +304,7 @@ def onWaveEndMsgFormatChange(*args):
     else:
         config.WaveEndFormat.set(_w1.WaveEndMsgFormat.get("1.0", "end-1c"))
 def onWaveVideoTitleFormatChange(*args):
-    debugAnnounce('waveTicket_support.onWaveVideoTitleFormatChange', *args)
+    debugAnnounce('waveDoc_support.onWaveVideoTitleFormatChange', *args)
     text = _w1.WaveVideoTitleFormat.get("1.0", "end-1c")
     if len(text) == 0:
         config.WaveVideoTitleFormat.reset()
@@ -312,31 +312,31 @@ def onWaveVideoTitleFormatChange(*args):
     else:
         config.WaveVideoTitleFormat.set(_w1.WaveVideoTitleFormat.get("1.0", "end-1c"))
 def WaveEndMsgCopy(*args):
-    debugAnnounce('waveTicket_support.OnWaveEndMsgCopy', *args)
+    debugAnnounce('waveDoc_support.OnWaveEndMsgCopy', *args)
     copyToClipboard(waveFormat(_w1.WaveEndMsgFormat.get("1.0", "end-1c")))
 def WaveStartMsgCopy(*args):
-    debugAnnounce('waveTicket_support.OnWaveStartMsgCopy', *args)
+    debugAnnounce('waveDoc_support.OnWaveStartMsgCopy', *args)
     copyToClipboard(waveFormat(_w1.WaveStartMsgFormat.get("1.0", "end-1c")))
 def WaveVideoTitleCopy(*args):
-    debugAnnounce('waveTicket_support.OnWaveVideoTitleCopy', *args)
+    debugAnnounce('waveDoc_support.OnWaveVideoTitleCopy', *args)
     copyToClipboard(waveFormat(_w1.WaveVideoTitleFormat.get("1.0", "end-1c")))
 def WaveRequestFinishMsgCopy(*args):
-    debugAnnounce('waveTicket_support.WaveRequestFinishMsgCopy', *args)
+    debugAnnounce('waveDoc_support.WaveRequestFinishMsgCopy', *args)
     copyToClipboard(_w1.WaveRequestFinishMsgTextElement.get("1.0", "end-1c"))
 def BuyerIDCopy(*args):
-    debugAnnounce('waveTicket_support.BuyerIDCopy', *args)
+    debugAnnounce('waveDoc_support.BuyerIDCopy', *args)
     copyToClipboard(_w1.BuyerID.get("1.0", "end-1c"))
 def BuyerIDCopyFormated(*args):
-    debugAnnounce('waveTicket_support.BuyerIDCopyFormated', *args)
+    debugAnnounce('waveDoc_support.BuyerIDCopyFormated', *args)
     copyToClipboard("/mail new "+_w1.BuyerID.get("1.0", "end-1c"))
 def SetWaveInfoAutoRefresh(*args):
-    debugAnnounce('waveTicket_support.SetWaveInfoAutoRefresh', *args)
+    debugAnnounce('waveDoc_support.SetWaveInfoAutoRefresh', *args)
     config.WaveInfoAutoRefresh.set(_w1.WaveInfoAutoRefresh.get())
 def SetWaveRequestFinishMsgAutoReset(*args):
-    debugAnnounce('waveTicket_support.SetWaveRequestFinishMsgAutoReset', *args)
+    debugAnnounce('waveDoc_support.SetWaveRequestFinishMsgAutoReset', *args)
     config.WaveRequestFinishMsgAutoReset.set(_w1.WaveRequestFinishMsgAutoReset.get())
 def setManualEditTrue(*args):
-    debugAnnounce('waveTicket_support.setManualEditTrue', *args)
+    debugAnnounce('waveDoc_support.setManualEditTrue', *args)
     global manualEdit
     manualEdit=True
 def onRawMsgLabelClick(*args):
@@ -346,7 +346,7 @@ def onRawMsgLabelClick(*args):
 
 # helper functions
 def waveFormat(text:str):
-    debugAnnounce('waveTicket_support.waveFormat', (text))
+    debugAnnounce('waveDoc_support.waveFormat', (text))
     replaceDict = {
         "%C": lambda: _w1.WaveCount.get("1.0", "end-1c"),  # 浪潮波次
         "%Dif": lambda: _w1.WaveMode.get("1.0", "end-1c"),  # 浪潮難度
@@ -362,7 +362,7 @@ def waveFormat(text:str):
         text = text.replace(key, func())
     return text
 def copyToClipboard(content:str):
-    debugAnnounce('waveTicket_support.copyToClipboard', (content))
+    debugAnnounce('waveDoc_support.copyToClipboard', (content))
     root.clipboard_clear()
     root.clipboard_append(content)
     root.update()
@@ -418,7 +418,7 @@ def debugMsg(msg):
 #         print_widgets(child, depth + 1)
 
 if __name__ == '__main__':
-    waveTicket.start_up()
+    waveDoc.start_up()
 
 
 
