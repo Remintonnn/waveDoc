@@ -14,7 +14,7 @@ Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單�
   - 📈<br>
 
 方案B: 下載exe
-  - 去[這邊](https://github.com/Remintonnn/waveDoc/releases/tag/Release)把exe檔案抓下來(只有windows的)
+  - 去[這邊](https://github.com/Remintonnn/waveDoc/releases)把exe檔案抓下來(只有windows的)
   - 點下載下來的檔案兩下
   - 📈<br>
 
