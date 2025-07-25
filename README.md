@@ -10,7 +10,7 @@ Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單�
   - clone這個專案
   - 安裝python(此專案寫於Python 3.12.4)
   - pip install 這個專案有用到的套件
-  - 用python打開waveTicket.pyw
+  - 用python打開waveDoc.pyw
   - 📈<br>
 
 方案B: 下載exe
