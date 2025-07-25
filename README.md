@@ -1,8 +1,8 @@
 (這玩意主要是自用的 soooooo)  
 Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單需要的相關文本, UI長這樣:  
 
-<img width="360" alt="image" src="https://github.com/user-attachments/assets/7b378656-86eb-41d2-b58e-4d3126c5c5a6" />  
-(UI由[PAGE](https://page.sourceforge.net/)生成, 有些Bug但比手敲UI代碼好上不只一點)
+<img width="360" alt="image" src="https://github.com/user-attachments/assets/7b378656-86eb-41d2-b58e-4d3126c5c5a6" /><br>
+(特別感謝[PAGE](https://page.sourceforge.net/)提供簡易快速的GUI製作)
 
 # 如何下載和打開
 方案A: 直接下載原代碼
