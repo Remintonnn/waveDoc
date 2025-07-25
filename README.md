@@ -1,4 +1,4 @@
-# 簡介
+t# 簡介
 (這玩意主要是自用的 soooooo)  
 Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單需要的相關文本, UI長這樣:  
 
@@ -34,7 +34,7 @@ Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單�
 # 檔案簡介
 waveDoc.pyw - 由PAGE生成的GUI代碼  
 waveDoc_support.py - 內部程式邏輯  
-開啟上面兩個檔案都能打開程式，開檔尾是pyw的那個可以避免跳小黑窗  
+點上面兩個檔案都能打開程式，開檔尾是pyw的那個可以避免跳小黑窗  
 Config.py - 處理設定相關物件  
 PageGen/ - 給PAGE用的資料夾, 用來放自動存檔檔案, 新生成的代碼和備份檔案等  
 PageGen/waveDoc.tcl - PAGE用的GUI存檔  
