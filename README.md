@@ -11,12 +11,12 @@ Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單�
   - 安裝python(此專案寫於Python 3.12.4)
   - pip install 這個專案有用到的套件
   - 用python打開waveTicket.pyw
-  - 📈
+  - 📈<br>
 方案B: 下載exe
   - 去[這邊](google.com)把exe檔案抓下來(只有windows的)
   - 點下載下來的檔案兩下
-  - 📈
-注意: 在開關程式後他會生成一個config.json在旁邊, 可以手動編輯, 但亂改程式會💥,
+  - 📈<br>
+注意: 在開關程式後他會生成一個config.json在旁邊, 可以手動編輯, 但亂改程式會💥,<br>
       若把它部分條目刪掉那些條目會回復預設, 全刪會全部回復
 
 # Work flow
