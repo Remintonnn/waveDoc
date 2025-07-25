@@ -347,15 +347,20 @@ def onRawMsgLabelClick(*args):
 # helper functions
 def waveFormat(text:str):
     debugAnnounce('waveDoc_support.waveFormat', (text))
+    now = datetime.datetime.now()
     replaceDict = {
         "%C": lambda: _w1.WaveCount.get("1.0", "end-1c"),  # 浪潮波次
         "%Dif": lambda: _w1.WaveMode.get("1.0", "end-1c"),  # 浪潮難度
         "%Mode": lambda: _w1.RequestMode.get("1.0", "end-1c"), # 訂單模式
+        "%B" : lambda: _w1.BuyerID.get("1.0", "end-1c"),  # 買家ID
+        "%MonNow": lambda: str(now.month),  # 月份
+        "%DNow": lambda: str(now.day).zfill(2),  # 日期
+        "%HNow": lambda: str(now.hour),  # 小時
+        "%MinNow": lambda: str(now.minute).zfill(2),  # 分鐘
         "%Mon": lambda: _w1.MonthSelectionBox.get(),  # 月份
         "%D": lambda: _w1.DateSelectionBox.get(),  # 日期
         "%H": lambda: _w1.HourSelectionBox.get(),  # 小時
         "%Min": lambda: _w1.MinuteSelectionBox.get().zfill(2),  # 分鐘
-        "%B" : lambda: _w1.BuyerID.get("1.0", "end-1c"),  # 買家ID
         "\n": lambda: " ",  # 換行->空格
     }
     for key, func in replaceDict.items():

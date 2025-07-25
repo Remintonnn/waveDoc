@@ -3,7 +3,7 @@ import json
 class _Configs:
     def __init__(self):
         self.debug = _Config(False)
-        self.WaveStartFormat = _Config(r"%Mon%D %H:%Min %Dif浪潮%Mode第%C波開打")
+        self.WaveStartFormat = _Config(r"%MonNow/%DNow %HNow:%MinNow %Dif浪潮%Mode第%C波開打")
         self.WaveEndFormat = _Config(r"浪潮%Mode第%C波結束")
         self.WaveVideoTitleFormat = _Config(r"%B %Mon%D %H-%Min-%C %Dif%Mode")
         self.AutoRefreshWaveInfo = _Config(True)
@@ -106,6 +106,7 @@ confingInstance = _Configs()
 
 # %C = 當前波數, %Dif = 浪潮難度, %Mode = 訂單模式, %B = 買家ID
 # %Mon = 月份, %D = 日期, %H = 小時, %Min = 分鐘
+# %MonNow = 月份, %DNow = 日期, %HNow = 小時, %MinNow = 分鐘
 # 文字太長可以使用滾輪查看其他行
 # 換行符號會被當空格, 把欄位清空來回復預設值
 # (欄位只有在你取消聚焦時會被儲存到設定/回復預設)
