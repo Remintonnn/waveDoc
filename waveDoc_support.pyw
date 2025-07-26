@@ -75,13 +75,8 @@ msgHeaders = {
     "RequestTimes":["次數","次"],
 }
 
-oldRawMsg = ""
-def RefreshWaveInfo(*args):
-    debugAnnounce('waveDoc_support.RefreshWaveInfo', *args)
-    global oldRawMsg
-    msg = _w1.rawMsg.get("1.0", "end-1c")
-    if msg == oldRawMsg: return
-    oldRawMsg = msg
+def RefreshWaveInfo(msg:str):
+    debugAnnounce('waveDoc_support.RefreshWaveInfo', (msg))
     _w1.MonthSelectionBox.set("")
     _w1.DateSelectionBox.set("")
     _w1.HourSelectionBox.set("")
@@ -285,11 +280,17 @@ def forcePlaceInsertMarkerAndUpdateWaveCount(event):
     _w1.WaveCount.insert("1.0", str(lineNum))
 
 # houseKeeping
+oldRawMsg = ""
 def onRawMsgChange(*args):
     debugAnnounce('waveDoc_support.onRawMsgChange', *args)
+    global oldRawMsg
+    msg = _w1.rawMsg.get("1.0", "end-1c")
+    if msg == oldRawMsg: return
+    print(f"{len(msg)}!={len(oldRawMsg)}")
+    oldRawMsg = msg
     if(_w1.WaveInfoAutoRefresh.get()):
         # Automatically refresh wave info when raw message text changes
-        RefreshWaveInfo(*args)
+        RefreshWaveInfo(msg)
     if(_w1.WaveRequestFinishMsgAutoReset.get()):
         # Automatically reset wave request finish message when raw message text changes
         ResetWaveRequestFinishMsg(*args)
@@ -347,8 +348,8 @@ def setManualEditTrue(*args):
     manualEdit=True
 def onRawMsgLabelClick(*args):
     _w1.rawMsg.delete("1.0","end-1c")
-    _w1.rawMsg.insert("1.0",random.choice(config.TestWaveRawMsg.get()))
-    if _w1.WaveInfoAutoRefresh: RefreshWaveInfo()
+    _w1.rawMsg.insert("1.0", random.choice(config.TestWaveRawMsg.get()))
+    onRawMsgChange()
 focusable = [tk.Text,tk.Entry,ttk.Combobox]
 def focusShifter(event:tk.Event):
     if type(event.widget) not in focusable:_top1.focus_set()
