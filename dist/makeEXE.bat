@@ -2,4 +2,4 @@
 REM "%~dp0" = here
 cd /d "%~dp0"
 cd ..
-pyinstaller -w --onefile waveDoc_support.py
+pyinstaller -w --onefile waveDoc.py

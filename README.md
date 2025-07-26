@@ -10,7 +10,7 @@ Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單�
   - clone這個專案
   - 安裝python(此專案寫於Python 3.12.4)
   - pip install 這個專案有用到的套件
-  - 用python打開waveDoc.pyw
+  - 用python打開waveDoc.py, 或waveDoc_support.pyw, 後者開啟時不會有小黑窗
 
 方案B: 下載exe
   - 去[這邊](https://github.com/Remintonnn/waveDoc/releases)把exe檔案抓下來(只有windows的)
@@ -30,9 +30,8 @@ Anyway, 他可以自動提取訂單訊息的裡的資訊, 和生成處裡訂單�
 - 把鼠標停在訊息生成格式那邊會有提示框說明訊息格式的寫法
 - 在結單訊息上點擊可以直接切換進行中場次
 # 檔案簡介
-waveDoc.pyw - 由PAGE生成的GUI代碼  
-waveDoc_support.py - 內部程式邏輯  
-點上面兩個檔案都能打開程式，開檔尾是pyw的那個可以避免跳小黑窗  
+waveDoc.py - 由PAGE生成的GUI代碼  
+waveDoc_support.pyw - 內部程式邏輯  
 Config.py - 處理設定相關物件  
 PageGen/ - 給PAGE用的資料夾, 用來放自動存檔檔案, 新生成的代碼和備份檔案等  
 PageGen/waveDoc.tcl - PAGE用的GUI存檔  
