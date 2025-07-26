@@ -448,7 +448,7 @@ class Toplevel1:
         self.CritButton.configure(activebackground="#d9d9d9")
         self.CritButton.configure(activeforeground="black")
         self.CritButton.configure(background="#d9d9d9")
-        self.CritButton.configure(command=lambda: waveDoc_support.addEnch(self.ExtendButton))
+        self.CritButton.configure(command=lambda: waveDoc_support.addEnch(self.CritButton))
         self.CritButton.configure(disabledforeground="#a3a3a3")
         self.CritButton.configure(font="-family {Segoe UI} -size 9")
         self.CritButton.configure(foreground="#000000")

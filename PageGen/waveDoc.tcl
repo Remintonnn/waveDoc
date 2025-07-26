@@ -358,7 +358,7 @@ proc vTclWindow.top1 {base} {
     vTcl:copy_lock $site_4_0.but98
     button "$site_4_0.but93" \
         -activebackground #d9d9d9 -activeforeground black -background #d9d9d9 \
-        -command "lambda: waveDoc_support.addEnch(self.ExtendButton)" \
+        -command "lambda: waveDoc_support.addEnch(self.CritButton)" \
         -disabledforeground #a3a3a3 -font "-family {Segoe UI} -size 9" \
         -foreground #000000 -highlightbackground #d9d9d9 \
         -highlightcolor #000000 -text "爆擊可能" 
