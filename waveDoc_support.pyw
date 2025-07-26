@@ -61,6 +61,7 @@ def main(*args):
     _w1.WaveRawMsgLabel.bind("<Button-1>",onRawMsgLabelClick)
     _w1.WaveRequestFinishMsgTextElement.bind("<KeyRelease>", setManualEditTrue)
     _w1.WaveRequestFinishMsgTextElement.bind("<ButtonRelease-1>", forcePlaceInsertMarkerAndUpdateWaveCount)
+    _top1.bind_all("<Button-1>", focusShifter, add="+")
     # da loop
     root.mainloop()
 
@@ -343,6 +344,9 @@ def onRawMsgLabelClick(*args):
     _w1.rawMsg.delete("1.0","end-1c")
     _w1.rawMsg.insert("1.0",random.choice(config.TestWaveRawMsg.get()))
     if _w1.WaveInfoAutoRefresh: RefreshWaveInfo()
+focusable = [tk.Text,tk.Entry,ttk.Combobox]
+def focusShifter(event:tk.Event):
+    if type(event.widget) not in focusable:_top1.focus_set()
 
 # helper functions
 def waveFormat(text:str):
