@@ -75,8 +75,9 @@ msgHeaders = {
     "RequestTimes":["次數","次"],
 }
 
-def RefreshWaveInfo(msg:str):
+def RefreshWaveInfo(msg:str|None=None):
     debugAnnounce('waveDoc_support.RefreshWaveInfo', (msg))
+    if msg==None: msg = _w1.rawMsg.get("1.0", "end-1c")
     _w1.MonthSelectionBox.set("")
     _w1.DateSelectionBox.set("")
     _w1.HourSelectionBox.set("")
@@ -338,10 +339,10 @@ def BuyerIDCopyFormated(*args):
     copyToClipboard("/mail new "+_w1.BuyerID.get("1.0", "end-1c"))
 def SetWaveInfoAutoRefresh(*args):
     debugAnnounce('waveDoc_support.SetWaveInfoAutoRefresh', *args)
-    config.WaveInfoAutoRefresh.set(_w1.WaveInfoAutoRefresh.get())
+    config.AutoRefreshWaveInfo.set(_w1.WaveInfoAutoRefresh.get())
 def SetWaveRequestFinishMsgAutoReset(*args):
     debugAnnounce('waveDoc_support.SetWaveRequestFinishMsgAutoReset', *args)
-    config.WaveRequestFinishMsgAutoReset.set(_w1.WaveRequestFinishMsgAutoReset.get())
+    config.AutoResetWaveRequestFinishMsg.set(_w1.WaveRequestFinishMsgAutoReset.get())
 def setManualEditTrue(*args):
     debugAnnounce('waveDoc_support.setManualEditTrue', *args)
     global manualEdit
