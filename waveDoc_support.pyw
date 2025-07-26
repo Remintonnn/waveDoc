@@ -75,8 +75,13 @@ msgHeaders = {
     "RequestTimes":["次數","次"],
 }
 
+oldRawMsg = ""
 def RefreshWaveInfo(*args):
     debugAnnounce('waveDoc_support.RefreshWaveInfo', *args)
+    global oldRawMsg
+    msg = _w1.rawMsg.get("1.0", "end-1c")
+    if msg == oldRawMsg: return
+    oldRawMsg = msg
     _w1.MonthSelectionBox.set("")
     _w1.DateSelectionBox.set("")
     _w1.HourSelectionBox.set("")
@@ -85,7 +90,7 @@ def RefreshWaveInfo(*args):
     _w1.WaveMode.delete("1.0", "end-1c")
     _w1.RequestMode.delete("1.0", "end-1c")
     _w1.RequestTimes.delete("1.0", "end-1c")
-    msg = [m.strip() for m in _w1.rawMsg.get("1.0", "end-1c").splitlines() if m.strip()]
+    msg = [m.strip() for m in msg.splitlines() if m.strip()]
     debugMsg("Raw message lines: " + str(msg))
     for line in msg:
         if TIMEHEADER in line: # try parse time
