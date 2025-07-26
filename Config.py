@@ -3,9 +3,9 @@ import json
 class _Configs:
     def __init__(self):
         self.debug = _Config(False)
-        self.WaveStartFormat = _Config(r"%MonNow/%DNow %HNow:%MinNow %Dif浪潮%Mode第%C波開打")
-        self.WaveEndFormat = _Config(r"浪潮%Mode第%C波結束")
-        self.WaveVideoTitleFormat = _Config(r"%B %Mon%D %H-%Min-%C %Dif%Mode")
+        self.WaveStartFormat = _Config(r"%MonNow/%DNow %HNow:%MinNow 浪潮第%C波開打")
+        self.WaveEndFormat = _Config(r"浪潮第%C波結束")
+        self.WaveVideoTitleFormat = _Config(r"%B %Dif%Mode %Mon%D %H-%Min-%C")
         self.AutoRefreshWaveInfo = _Config(True)
         self.AutoResetWaveRequestFinishMsg = _Config(True)
         self.RequestFinishHeader = _Config("[訂單已完成]")
