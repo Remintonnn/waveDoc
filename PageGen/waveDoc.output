@@ -1,0 +1,108 @@
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 853, in <lambda>
+    self.UnGoneAbleButton.configure(command=lambda: waveDoc_support.addEnch(self.UnGoneAbleButton))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 853, in <lambda>
+    self.UnGoneAbleButton.configure(command=lambda: waveDoc_support.addEnch(self.UnGoneAbleButton))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 853, in <lambda>
+    self.UnGoneAbleButton.configure(command=lambda: waveDoc_support.addEnch(self.UnGoneAbleButton))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 837, in <lambda>
+    self.ExtendButton.configure(command=lambda: waveDoc_support.addEnch(self.ExtendButton))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 837, in <lambda>
+    self.ExtendButton.configure(command=lambda: waveDoc_support.addEnch(self.ExtendButton))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 837, in <lambda>
+    self.ExtendButton.configure(command=lambda: waveDoc_support.addEnch(self.ExtendButton))
+                                                ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 725, in <lambda>
+    self.StubbronButton.configure(command=lambda: waveDoc_support.addEnch(self.StubbronButton))
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 725, in <lambda>
+    self.StubbronButton.configure(command=lambda: waveDoc_support.addEnch(self.StubbronButton))
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 725, in <lambda>
+    self.StubbronButton.configure(command=lambda: waveDoc_support.addEnch(self.StubbronButton))
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 725, in <lambda>
+    self.StubbronButton.configure(command=lambda: waveDoc_support.addEnch(self.StubbronButton))
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 821, in <lambda>
+    self.BloodSuckingButton.configure(command=lambda: waveDoc_support.addEnch(self.BloodSuckingButton))
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Users\a1187\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\a1187\Desktop\waveDoc\PageGen\waveDoc.py", line 676, in <lambda>
+    self.CritButton.configure(command=lambda: waveDoc_support.addEnch(self.CritButton))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'waveDoc_support' has no attribute 'addEnch'
